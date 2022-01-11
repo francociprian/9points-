@@ -1,0 +1,59 @@
+/* BARRA DE NAVEGACION */
+header {
+    background-color: $black_secundary;
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+
+    &__logo {
+        font-size: 2em;
+        font-family: $fontLogo;
+        line-height: 65px;
+        letter-spacing: 1.5px;
+        padding: 0 0.5rem;
+        &:hover {
+            color: $white_primary;
+        }
+    }
+
+    &__lista {
+        line-height: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    &__items {
+        padding: 0.6rem;
+        margin: 0 0.3rem;
+    }
+    &__link {
+        letter-spacing: 1.5px;
+        font-weight: 400;
+        font-size: 1.2em;
+        transition: .4s cubic-bezier(0.15, 0.10, 0.355, 1);
+        &:hover {
+            color: $orange_aerospace;
+        }
+    }
+
+    
+    &__toggle {
+        color: $white_primary;
+        background: none;
+        border: none;
+        font-size: 2em;
+        line-height: 65px;
+        cursor: pointer;
+        display: none;
+    } 
+}

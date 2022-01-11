@@ -1,0 +1,18 @@
+/* ESTILOS GENERALES DEL INICIO DE LAs PAGINAS */
+.inicio {
+    display: grid;
+    height: 100vh;
+
+    &__titulo {
+        grid-area: tituloPagina;
+        font-weight: 900;
+        padding: 1rem;
+        align-self: center;
+        justify-self: start;
+    }
+    &__descripcion {
+        grid-area: descripcionPagina;
+        align-self: center;
+        justify-self: end;
+    }
+}

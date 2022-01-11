@@ -1,0 +1,79 @@
+@mixin flex-row ($justify-content, $align-items, $flex-wrap){
+    display: flex;
+	flex-direction: row;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
+@mixin flex-column ($justify-content, $align-items, $flex-wrap){
+	display: flex;
+	flex-direction:column;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin button ($font-size,$font-weight,$letter-spacing,$width,$padding,$margin){
+    font-size: $font-size;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing; 
+    width: $width;
+    padding: $padding;
+    margin:$margin;  
+}
+/* INICIO */
+.main {
+    height: 95vh;
+    @include flex-column(space-evenly, center, nowrap);
+
+    &__logo {
+        display: none;
+        color: $white_primary;
+        font-family: $fontLogo;
+        font-size: 15vw;
+        font-weight: 900;
+        letter-spacing: 5px;
+    }
+
+    &__imagen {
+        opacity: 0.9;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.nosotrosText {
+    font-size: calc(1em + 0.9vw);
+    font-weight: 700;
+    word-spacing: 1px;
+    line-height: normal;
+    padding: 2rem;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.nosotros {
+    margin: 6rem 0;
+    text-align: center;
+    @include flex-row (center,center,wrap);
+
+    &__proyectos {
+        @include button (1.2em, 500, 2px, 450px, 0.8rem 3.20rem,1rem);
+        transition: all 0.3s;
+
+        &:hover {
+            color: $black_primary;
+            background-color: $white_primary;
+        }
+    }
+
+    &__contacto {
+        @include button (1.2em, 500, 2px, 450px, 0.8rem 3.20rem, 1rem);
+        transition: all 0.3s;
+
+        &:hover {
+            color: $black_primary;
+            background-color: $orange_aerospace;
+        }
+    }
+}

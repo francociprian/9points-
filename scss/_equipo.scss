@@ -1,0 +1,28 @@
+/* EQUIPO*/
+.equipo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__card {
+        padding: 2rem;
+        margin: 3rem;
+        text-align: center;
+        border: 1px solid $black_primary;
+        box-shadow: 5px 5px 12px -2px rgba(0, 0, 0, 0.48);
+        transition: all 0.5s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__nombre {
+        font-size: 2em;
+        font-weight: 400;
+        padding: 0.5rem 0;
+    }
+    &__funcion {
+        color: $sonic_silver;
+        padding: 0.3rem 0;
+    }
+}

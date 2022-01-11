@@ -1,0 +1,38 @@
+/* SERVICIOS */
+.servicios {   
+    width: 80%;
+    margin: auto;
+    margin-top: 4rem;
+    &__title {
+        font-size: 2.5em;
+        font-weight: 600;
+        text-align: center;
+        padding-bottom: 2.5rem ;
+    }
+    &__boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        div {
+            width: 33%;
+            padding: 10px 55px 85px 55px;
+        }
+    }
+    &__icons {
+        width: 95px;
+        transition: transform .6s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    &__nombre {
+        font-size: 1.5em;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+    &__desc {
+        text-align: center;
+    }
+}

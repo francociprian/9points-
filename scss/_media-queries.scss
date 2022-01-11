@@ -1,0 +1,256 @@
+@media only screen and (max-width: 599px) {
+    /* BARRA DE NAVEGACION */
+    .menu {
+        justify-content: space-between;
+        &__logo {
+            padding: 0 1.5rem;
+        }
+        &__lista {
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: $black_secundary; 
+            z-index: 999;
+
+            position: fixed;
+            top: 65px;
+            padding: 2em 0;
+    
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+    
+            left: 100%;
+            transition: left .6s cubic-bezier(.68, -.55, .265, 1.55);
+        }
+        &__items {
+            font-size: 2em;
+            line-height: 4rem;
+            text-transform: uppercase;
+        }
+        &__toggle {
+            display: block;
+            padding: 0 1rem;
+        }
+        & .nav-menu_visible {
+            left: 0;
+        }
+    }
+    /* INDEX */
+    .main {
+        margin-top: 3.75rem;
+        height: 85vh;
+        &__imagen {
+            width: 100%;
+        }
+    }
+    .nosotrosText{
+        font-size: calc(1em + 2vw);
+    }
+    /* FOOTER */
+    footer {
+        .newsletter {
+            &__form {
+                row-gap: 12px;
+            }
+            &__form-imput {
+                width: 92%;
+            }
+        }
+    }
+    /* INICIO PAGINAS */
+    .inicio {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: row dense;
+        align-items: center;
+        grid-template-areas:
+            "tituloPagina tituloPagina"
+            "descripcionPagina descripcionPagina";
+        &__titulo {
+             font-size: 6em;
+        }
+        &__descripcion {
+            padding: 1rem 2rem 1rem 2rem;
+            font-size: 1.4em;
+            align-self: flex-start;
+        }
+    }
+    /* SERVICIOS */
+    .servicios {
+        &__boxes {
+            div {
+                width: 100%;
+            }
+        }
+    }
+    /* PROYECTOS */
+    .proyectos{
+        &__container{
+            padding: 0 1.5rem;
+        }
+        &__galeria {
+            gap: 3rem;
+            grid-template-areas:    "img-1 img-1 img-1 img-1"
+                                    "img-2 img-2 img-2 img-2"
+                                    "img-3 img-3 img-3 img-3"
+                                    "img-4 img-4 img-4 img-4"
+                                    "img-5 img-5 img-5 img-5"
+                                    "img-6 img-6 img-6 img-6"
+                                    "img-7 img-7 img-7 img-7"
+                                    "img-8 img-8 img-8 img-8"
+                                    "img-9 img-9 img-9 img-9"
+                                    "img-10 img-10 img-10 img-10"
+                                    "img-11 img-11 img-11 img-11"
+                                    "img-12 img-12 img-12 img-12"
+                                    !important;
+        }
+        .img-3,
+        .img-8,
+        .img-12 {
+            min-height: 35em;
+        }
+    }
+    /* EQUIPO */
+    .equipo {
+        margin: 1rem 0;
+        &__card {
+            width: 400px;
+            height: auto;
+            padding: 0.5rem 0;
+            margin: 1.5rem;
+        }
+        &__nombre {
+            font-size: 2.5em;
+        } 
+    }
+    /* CONTACTO */
+    .contacto {
+        padding: 1rem 1rem;
+    }
+}
+@media only screen and (min-width: 600px) {
+    /* BARRA DE NAVEGACION */
+    .menu {
+        &__logo {
+        padding: 0 1rem;}
+    }
+    /* INDEX */
+    .main {
+        margin-top: 3.75rem;
+    }
+    /* INICIO PAGINAS */
+    .inicio {
+        grid-template-columns: 4em 1fr 1fr 4em;
+        grid-template-areas:
+                            ". tituloPagina tituloPagina ."
+                            ". descripcionPagina descripcionPagina .";
+
+        &__titulo {
+            padding: 0;
+            font-size: calc(2.2em + 10.97vw)
+        }
+        &__descripcion {
+            padding: 1rem;
+            font-size: 1.7em;
+            width: 100%;
+        }
+    }
+}
+@media only screen and (max-width: 768px) { 
+    /* SERVICIOS */
+    .servicios {
+        width: 100%;
+        &__boxes {
+            div {
+                width: 100%;
+            }
+        }
+        &__desc {
+            padding: 0 1rem;
+        }
+    }
+    /* PROYECTOS */
+    .proyectos{
+        &__galeria {
+            grid-template-areas:    "img-1 img-2 img-3 img-3"
+                                    "img-4 img-4 img-3 img-3"
+                                    "img-5 img-5 img-6 img-7"
+                                    "img-8 img-8 img-9 img-10"
+                                    "img-8 img-8 img-12 img-12"
+                                    "img-11 img-11 img-12 img-12";
+        }
+    }
+    /* FOOTER*/ 
+    footer{
+        .footer {
+            flex-direction: column-reverse;
+            row-gap: 1.5rem;
+        }
+    }
+}
+@media only screen and (min-width:1024px) {
+    /* BARRA DE NAVEGACION */
+    .menu {
+        padding: 0 2em;
+    }
+    /* INICIO PAGINAS */
+    .inicio {
+        grid-template-columns: 9.5em 1fr 1fr 9.5em;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-flow: row dense;
+        grid-template-areas:
+                            ". tituloPagina tituloPagina ."
+                            ". descripcionPagina descripcionPagina .";
+    }
+}
+@media only screen and (max-width:1024px) {
+    /* BARRA DE NAVEGACION */
+    .menu {
+        justify-content: space-between;
+        &__logo {
+            padding: 0 1.5rem;
+        }
+        &__lista {
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: $black_secundary;
+            z-index: 1000;
+            position: fixed;
+            top: 65px;
+            padding: 2em 0;
+    
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+    
+            left: 100%;
+            transition: left .6s cubic-bezier(.68, -.55, .265, 1.55);
+        }
+        &__items {
+            font-size: 2em;
+            line-height: 4rem;
+            text-transform: uppercase;
+        }
+
+
+        &__toggle {
+            display: block;
+            padding: 0 1rem;
+        }
+        & .menu__lista--visible {
+            left: 0;
+        }
+    }
+}
+@media only screen and (min-width:1200px) {
+    /* INICIO PAGINAS */
+    .inicio {
+        &__titulo {
+            font-size: 12vw;
+        }
+        &__descripcion {
+            font-size: 2em;
+            width: 80%;
+        }
+    }
+}

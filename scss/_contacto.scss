@@ -1,0 +1,290 @@
+@mixin button ($font-size, $font-weight, $letter-spacing, $padding, $margin) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    padding: $padding;
+    margin: $margin;
+}
+
+/* CONTACTO */
+.contacto {
+    h2{
+      font-size: 2.5em;
+      font-weight: 200;
+      padding: 1rem 1rem;
+    }
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: 3rem 0;
+
+        .info {
+            
+            width: 450px;
+            
+            &__ubicacion,
+            &__email,
+            &__telefono {
+                margin-top: 40px;
+                display: flex;
+
+                i {
+                    color: $orange_aerospace;
+                    background-color: $alice_blue;
+                    /* background-color: rgb(179, 178, 178); */
+                    transition: all 0.3s ease-in-out;
+                    width: 60px;
+                    height: 60px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+
+                &:hover {
+                    i {
+                        color: $white_primary;
+                        background-color: $orange_aerospace;
+                    }
+                }
+            }
+
+            &__titulo {
+                padding: 0 0 0 40px;
+                font-size: 1.5em;
+                font-weight: 500;
+                margin-bottom: 5px;
+                color: $black_primary;
+            }
+
+            &__descripcion {
+                padding: 0 0 0 40px;
+                margin-bottom: 0;
+                font-size: 0.9em;
+                color: $sonic_silver;
+            }
+        }
+        
+        .form {
+          width: 1000px;
+          &__container {
+            padding: 1rem 0;
+
+            .form__group{
+              // label
+              .label {
+                font-size: 1em;
+                line-height: 2rem;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+              }
+              .label-placeholder {
+                margin-top: 1.85rem;
+              }
+              .label-placeholder > .input::placeholder,
+              .label-placeholder > .textarea::placeholder {
+                opacity: 0;
+                color: transparent;
+              }
+              // textarea
+              .textarea {
+                padding: 0.5rem 0.75rem;
+                width: 100%;
+                resize: vertical;
+                min-height: 10rem;
+                line-height: 1.5;
+                border: none;
+                border-radius: 0.25rem;
+                color: #2a3039;
+                box-shadow: 0 0 0 1px $linkWater inset, 0 0 0 transparent;
+                transition: all 0.1s ease;
+                  &:focus{
+                    outline-color: $orange_aerospace;
+                  }
+              }
+              // imput
+              input[type="text"],
+              input[type="email"] {
+                transition: all 0.2s ease;
+                width: 100%;
+                font-size: 1em;
+                line-height: 2rem;
+                padding: 0.5rem 0.75rem;
+                background-color: transparent;
+                border-radius: 0.25rem;
+                border-style: none;
+                outline: none;
+                transition-property: box-shadow, color;
+                appearance: none;
+                color: #2a3039;
+                box-shadow: 0 0 0 1px $linkWater inset, 0 0 0 transparent;
+                &:focus {
+                  box-shadow: none ;
+                  border: 2px solid $orange_aerospace;
+                  outline-width: 0;
+                }
+              }
+              // placeholder
+              .placeholder {
+                pointer-events: none;
+                font-size: 1.2em;
+                position: absolute;
+                backface-visibility: hidden;
+                top: 12px;
+                left: 18px;
+                line-height: 1.2em;
+                will-change: transform;
+                transform-origin: left top 0;
+                padding: 1px 0 0 1px;
+                color: #536171;
+                transform: translate3d(0, 0, 0) scale(1);
+                background-color: #fff;
+                transition-property: color, transform;
+                box-shadow: -6px 0 #ffffff, 6px 0 #ffffff;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-duration: 0.25s;
+              }
+          
+              // Animate placeholder label when inputs get interaction
+              .input:focus,
+              .input:not(:placeholder-shown),
+              .textarea:focus,
+              .textarea:not(:placeholder-shown) {
+                & ~ .placeholder {
+                  // transform: translate3d(0, -23px, 0) scale(0.875);
+                  transform: translate3d(0, -23px, 0) scale(1);
+                }
+              }
+            }
+
+            .form__btn {
+              margin: 1.5rem 0;
+              text-align: center;
+        
+              &-enviar {
+                @include button (1em, 500, 2px, 0.4rem 3.20rem, 0 0.5rem);
+                    transition: all 0.3s;
+        
+                    &:hover {
+                        transform: scale(1.1);
+                        background-color: $orange_aerospace;
+                        color: $white_primary;
+                    }
+              }
+              &-borrar{
+                @include button (1em, 500, 2px, 0.4rem 3.20rem, 0 0.5rem);
+                transition: all 0.3s;
+        
+                &:hover {
+                    transform: scale(1.1);
+                    background-color: $black_primary;
+                    color: $white_primary;
+                }
+              }
+              
+            }
+          }
+            
+        }
+    }
+
+    
+
+    iframe {
+        filter: grayscale(100%);
+    }
+}
+
+// .form__container {
+//   .form__group{
+//     // label
+//     .label {
+//       font-size: 1em;
+//       line-height: 2rem;
+//       display: flex;
+//       flex-direction: column;
+//       position: relative;
+//     }
+//     .label-placeholder {
+//       margin-top: 1.85rem;
+//     }
+//     .label-placeholder > .input::placeholder,
+//     .label-placeholder > .textarea::placeholder {
+//       opacity: 0;
+//       color: transparent;
+//     }
+//     // textarea
+//     .textarea {
+//       padding: 0.5rem 0.75rem;
+//       width: 100%;
+//       resize: vertical;
+//       min-height: 10rem;
+//       line-height: 1.5;
+//       border: none;
+//       border-radius: 0.25rem;
+//       color: #2a3039;
+//       box-shadow: 0 0 0 1px $linkWater inset, 0 0 0 transparent;
+//       transition: all 0.1s ease;
+//         &:focus{
+//           outline-color: $orange_aerospace;
+//         }
+//     }
+//     // imput
+//     input[type="text"],
+//     input[type="email"] {
+//       transition: all 0.2s ease;
+//       width: 100%;
+//       font-size: 1em;
+//       line-height: 2rem;
+//       padding: 0.5rem 0.75rem;
+//       background-color: transparent;
+//       border-radius: 0.25rem;
+//       border-style: none;
+//       outline: none;
+//       transition-property: box-shadow, color;
+//       appearance: none;
+//       color: #2a3039;
+//       box-shadow: 0 0 0 1px $linkWater inset, 0 0 0 transparent;
+//       &:focus {
+//         box-shadow: none ;
+//         border: 2px solid $orange_aerospace;
+//         outline-width: 0;
+//       }
+//     }
+//     // placeholder
+//     .placeholder {
+//       pointer-events: none;
+//       font-size: 1.2em;
+//       position: absolute;
+//       backface-visibility: hidden;
+//       top: 12px;
+//       left: 18px;
+//       line-height: 1.2em;
+//       will-change: transform;
+//       transform-origin: left top 0;
+//       padding: 1px 0 0 1px;
+//       color: #536171;
+//       transform: translate3d(0, 0, 0) scale(1);
+//       background-color: #fff;
+//       transition-property: color, transform;
+//       box-shadow: -6px 0 #ffffff, 6px 0 #ffffff;
+//       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+//       transition-duration: 0.25s;
+//     }
+
+//     // Animate placeholder label when inputs get interaction
+//     .input:focus,
+//     .input:not(:placeholder-shown),
+//     .textarea:focus,
+//     .textarea:not(:placeholder-shown) {
+//       & ~ .placeholder {
+//         // transform: translate3d(0, -23px, 0) scale(0.875);
+//         transform: translate3d(0, -23px, 0) scale(1);
+//       }
+//     }
+//   }
+// }

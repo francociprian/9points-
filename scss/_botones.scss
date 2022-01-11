@@ -1,0 +1,59 @@
+.btn-black {
+    color: $black_primary;
+    border: 1.8px solid $black_primary;
+    border-radius: 3px;
+
+    &--light {
+        @extend .btn-black;
+        background-color: $white_primary;
+    }
+
+    &--dark {
+        @extend .btn-black;
+        background-color: $black_primary;
+    }
+    &--darkgray{
+        @extend .btn-black;
+        background-color: $black_secundary;
+    }
+}
+
+.btn-white {
+    color: $white_primary;
+    border: 1.8px solid $white_primary;
+    border-radius: 3px;
+
+    &--light {
+        @extend .btn-white;
+        background-color: $white_primary;
+    }
+
+    &--dark {
+        @extend .btn-white;
+        background-color: $black_primary;
+    }
+    &--darkgray{
+        @extend .btn-white;
+        background-color: $black_secundary;
+    }
+}
+
+.btn-orange {
+    color: $orange_aerospace;
+    border: 1.8px solid $orange_aerospace;
+    border-radius: 3px;
+
+    &--light {
+        @extend .btn-orange;
+        background-color: $white_primary;
+    }
+    
+    &--dark {
+        @extend .btn-orange;
+        background-color: $black_primary;
+    }
+    &--darkgray{
+        @extend .btn-orange;
+        background-color: $black_secundary;
+    }
+}
