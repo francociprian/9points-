@@ -200,6 +200,10 @@ footer {
     padding-top: 1.5rem;
     margin-top: 1rem;
     border-top: 1px solid; }
+    footer .footer--inicio {
+      border: none;
+      padding: 0;
+      margin: 0; }
     footer .footer__logo {
       font-size: 1.5em;
       font-family: "Alfa Slab One", cursive; }
@@ -211,6 +215,8 @@ footer {
       footer .footer__terminos li p {
         color: #747474;
         opacity: 0.5; }
+      footer .footer__terminos--inicio li a {
+        color: black; }
     footer .footer__redes {
       display: flex;
       gap: 12px; }
@@ -528,7 +534,7 @@ footer {
       .contacto__container .form__container .form__group .input:not(:placeholder-shown) ~ .placeholder,
       .contacto__container .form__container .form__group .textarea:focus ~ .placeholder,
       .contacto__container .form__container .form__group .textarea:not(:placeholder-shown) ~ .placeholder {
-        transform: translate3d(0, -23px, 0) scale(1); }
+        transform: translate3d(0, -23px, 0) scale(0.875); }
       .contacto__container .form__container .form__btn {
         margin: 1.5rem 0;
         text-align: center; }

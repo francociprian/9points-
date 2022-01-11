@@ -7,7 +7,7 @@ footer {
     padding: 1.5rem 0;
     background-color: $black_secundary;
     color:$white_primary;
-
+    
     .newsletter {
         display: flex;
         justify-content: center;
@@ -65,6 +65,11 @@ footer {
         padding-top: 1.5rem;
         margin-top: 1rem;
         border-top: 1px solid;
+        &--inicio {
+            border: none; 
+            padding: 0; 
+            margin: 0;
+        }
         &__logo {
             font-size: 1.5em;
             font-family: $fontLogo;  
@@ -78,6 +83,11 @@ footer {
             li p {
                 color: $sonic_silver;
                 opacity: 0.5;
+            }
+            &--inicio {
+                li a {
+                    color: $black_primary;
+                }
             }
         }
         &__redes {
